@@ -1,0 +1,17 @@
+.title{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.title p {
+    margin: 2px;
+    font-size: 36px;
+    display: flex;
+    color: #171718;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+h5{
+    position: relative;
+}

@@ -1,0 +1,46 @@
+.container{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+
+.container a,.container a:link,a:visited,a:active,a:focus{
+    font-size: 20px;
+    text-decoration: none;
+    color: #202122;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+.container a::before,
+.container a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Adjust the underline height as needed */
+  bottom: -3px;
+  background-color: #7fbefc; /* Underline color */
+  transition: width 0.5s ease, opacity 0.4s ease; /* Add a smooth transition for width and opacity */
+}
+.container a:hover{
+    color: #17191b;
+}
+.container a::before {
+    left: 50%; /* Position the left underline at the center */
+    transform: translateX(-50%);
+  }
+  
+  .container a::after {
+    right: 50%; /* Position the right underline at the center */
+    transform: translateX(50%);
+  }
+  .container a:hover::before,
+  .container a:hover::after {
+    width: 100%; /* Expand the underline width to the center */
+    opacity: 0.5; /* Fade in the underline */
+  }
+.container li, .container ul{
+    list-style: none;
+    display: inline;
+    padding-right: 30px;
+}

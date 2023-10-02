@@ -1,0 +1,93 @@
+.aboutMe{
+    display: flex;
+    margin: 200px 320px;
+}
+.aboutMe h4{
+    font-size: 36px;
+}
+.wrap{
+    display: flex;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+}
+.wrap img{
+    width: 45%;
+    height: auto;
+    border-radius: 10px;
+
+}
+/* .about-me-page  {
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other content 
+  } */
+
+.aboutMe h4::after{
+    margin-bottom: 0;
+    content: '';
+    width: 20px;
+    border-top: 2px solid #fff;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.aboutMe p, .aboutMe img{
+    font-size: 36px;
+}
+.learn-more-button, .close-button{
+    font-size: 20px;
+    background-color: transparent;
+    border: solid 1px #5aa5de ;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #000;
+}
+
+.learn-more-button:hover, .close-button:hover{
+   background-color: #9ac8eb57;
+   border: solid 1px #315b7a;
+   color: #dbdbdb;
+}
+.hideButton{
+    width: 100%; 
+    height: auto; 
+} 
+.hideButton h4{
+    display: flex;
+    justify-content: start;
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+} 
+.hideButton p{
+    text-align: start;
+    font-size: 17px;
+    font-weight: lighter;
+    color: #646464;
+    font-family: auto;
+    text-indent: 20px;
+    text-align: justify;
+    width: 75%;
+}
+/* .learn-more-button{
+    display: none; /* Hide the button by default */
+    /* width: 100%;
+    height: 100%; */
+    /* background-color: #3498db; */
+    /* color: #fff;
+    border: none;
+    cursor: pointer;
+} */
+/* .hideButton:hover .learn-more-button {
+    display: block; /* Show the button when the container is hovered */

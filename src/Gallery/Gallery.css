@@ -1,0 +1,49 @@
+.gallery{
+    padding: 50px;
+    margin: 100px 0;
+}
+.gallery h4{
+    font-size: 36px;
+    margin-bottom: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: burlywood;
+}
+.gallery p{
+    font-size: 17px;
+    font-family: auto;
+    font-weight: lighter;
+    color: #646464;
+    text-indent: 20px;
+    text-align: center;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.galleryContainer{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 200px;
+}
+.galleryContainer img{
+    width: 50%;
+    height: auto;
+    grid-column: span 1;
+
+}
+.galleryContainer button{
+    border-style: none;
+    position: absolute;
+}
+button.prev{
+    padding-right: 20px;
+}
+button.next{
+    padding-left: 20px;
+}
+img{
+    max-width: 100%;
+    max-height: 400px;
+    transition: opacity 1s ease-in-out; /* Add a smooth opacity transition */
+}

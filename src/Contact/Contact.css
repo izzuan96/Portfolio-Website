@@ -1,0 +1,5 @@
+.contact{
+    grid-column: span 6;
+    background-color:#218B82;
+    font-size: 10px;
+}
