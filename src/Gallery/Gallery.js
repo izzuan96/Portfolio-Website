@@ -85,19 +85,19 @@ function Gallery() {
     <p>I captured a stunning array of images using my smartphone, seamlessly blending the architectural wonders of towering buildings with the serene beauty of untouched nature. Each picture tells a unique story, showcasing the harmonious coexistence of human-made marvels and the unspoiled grace of the natural world, a testament to the beauty of our planet.</p>
     <div className='galleryContainer'>
       <div className='card1'>
-        <button className='prev' onClick={prevSlide1}>Previous</button>
+        <button className='arrowButton' onClick={prevSlide1}>&#706;</button>
         <img src={images[currentSlide1]} alt={`Slide ${currentSlide1 + 1}`}></img>
-        <button className='next' onClick={nextSlide1}>Next</button>
+        <button className='arrowButton' onClick={nextSlide1}>&#707;</button>
       </div>
       <div className='card2'>
-      <button className='prev' onClick={prevSlide2}>Previous</button>
+      <button className='arrowButton' onClick={prevSlide2}>&#706;</button>
         <img src={images[currentSlide2]} alt={`Slide ${currentSlide2 + 2}`}></img>
-        <button className='next' onClick={nextSlide2}>Next</button>
+        <button className='arrowButton' onClick={nextSlide2}>&#707;</button>
       </div>
       <div className='card3'>
-        <button className='prev' onClick={prevSlide3}>Previous</button>
+        <button className='arrowButton' onClick={prevSlide3}>&#706;</button>
         <img src={images[currentSlide3]} alt={`Slide ${currentSlide3 + 3}`}></img>
-        <button className='next' onClick={nextSlide3}>Next</button>
+        <button className='arrowButton' onClick={nextSlide3}>&#707;</button>
     </div>
    </div>
    </div>
