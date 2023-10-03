@@ -4,21 +4,21 @@
 }
 .gallery h4{
     font-size: 36px;
-    margin-bottom: 100px;
+    margin-bottom: 24px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    background-color: rgb(238, 199, 148);
 }
 .gallery p{
+    padding:0px 200px 80px 424px;
     font-size: 17px;
     font-family: auto;
     font-weight: lighter;
     color: #646464;
     text-indent: 20px;
-    text-align: center;
+    text-align:inherit;
     width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
 }
 .galleryContainer{
     display: grid;
@@ -32,16 +32,35 @@
     grid-column: span 1;
 
 }
-.galleryContainer button{
-    border-style: none;
-    position: absolute;
+.card1,
+.card2,
+.card3 {
+  display: flex;
+  flex-direction: row; /* Horizontal layout for items within each card */
+  justify-content: space-between; /* Put items at each card side */
+  align-items: center; /* Vertically center items within each card */
+  /* Add any other styling you need for the cards */
 }
-button.prev{
-    padding-right: 20px;
-}
-button.next{
-    padding-left: 20px;
-}
+/* Style the arrow buttons */
+.arrowButton {
+    color: #111010;
+    border: none;
+    cursor: pointer;
+    font-size: 40px; /* Adjust the font size as needed */
+  }
+  /* Style the left arrow button */
+  .arrowButton:first-child {
+    margin-right: 10px; /* Create spacing between the left arrow and the image */
+    padding-left: 100px;
+    
+  }
+  
+  /* Style the right arrow button */
+  .arrowButton:last-child {
+    margin-left: 10px; /* Create spacing between the right arrow and the image */
+    padding-right: 100px;
+
+  }
 img{
     max-width: 100%;
     max-height: 400px;
