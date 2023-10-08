@@ -1,5 +1,18 @@
-.resume{
-    grid-column: span 3;
-    background-color: #C54B6C ;
-    font-size: 10px;
+.resume h4{
+    /* display: flex;
+    justify-content: start; */
+    font-size: 36px;
+    margin-bottom: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+}
+.resume p{
+    font-size: 17px;
+    font-weight: lighter;
+    color: #646464;
+    font-family: auto;
+    text-indent: 20px;
+    text-align: justify;
+    text-align: center;
 }
