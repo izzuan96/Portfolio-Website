@@ -6,8 +6,6 @@ import Work from '../Work/Work';
 import Resume from '../Resume/Resume';
 import Contact from '../Contact/Contact';
 import Gallery from '../Gallery/Gallery';
-import Item from '../Item/Item';
-import Navigation from '../Navigation/Navigation';
 import myPicture from '../images/izzuan.jpeg';
 import image1 from '../images/js.png';
 import image2 from '../images/html.png';
@@ -47,9 +45,9 @@ function Home() {
         </div>
         <AboutMe />
         <Gallery/>
-        <Work />
+        {/* <Work /> */}
         {/* <Item /> */}
-        <Resume />
+ 
         <Contact />
         {/* Add other components and content as needed */}
     </div>
