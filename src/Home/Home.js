@@ -2,8 +2,6 @@ import React from 'react'
 import './Home.css';
 import Header from '../Header/Header';
 import AboutMe from '../AboutMe/AboutMe';
-import Work from '../Work/Work';
-import Resume from '../Resume/Resume';
 import Contact from '../Contact/Contact';
 import Gallery from '../Gallery/Gallery';
 import myPicture from '../images/izzuan.jpeg';
@@ -33,14 +31,14 @@ function Home() {
             <p>Hi, I'm Izzuan Zawawi. A passionate Front-End React Developer. Turning Lines of Code into Reality!</p>
           </div>
           <div className='homePicture'>
-            <img src={myPicture} alt='my picture'></img>
+            <img src={myPicture} alt='my'></img>
           </div>
         </div>
         <div className='toolList' >
               <p>Tech stack |</p>
               {imageTools.map((imageTool) => (
               <img src={imageTool.title} alt={imageTool.des}>
-              </img>
+              </img>       
               ))}
         </div>
         <AboutMe />

@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import './Contact.css';
 import Resume from '../Resume/Resume';
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 function Contact() {
   const [email, setEmail] = useState('');
@@ -26,7 +27,8 @@ function Contact() {
         {/* <button className="btn btn-outline-primary" type="submit">
           <i class="bi bi-arrow-right-circle"></i>
         </button> */}
-         <button class="btn btn-primary"><i class="fa fa-book"></i></button>
+         <button class="btn btn-primary">test</button>
+         <i class="fa fa-book">sini</i>
       </form>
       <div className='wrapContact'>
         <a href='https://www.linkedin.com/in/izzuan-zawawi-81b67b209'>
