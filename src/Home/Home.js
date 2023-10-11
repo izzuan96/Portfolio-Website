@@ -31,21 +31,18 @@ function Home() {
             <p>Hi, I'm Izzuan Zawawi. A passionate Front-End React Developer. Turning Lines of Code into Reality!</p>
           </div>
           <div className='homePicture'>
-            <img src={myPicture} alt='my'></img>
+            <img src={myPicture} alt='my picture'></img>
           </div>
         </div>
         <div className='toolList' >
               <p>Tech stack |</p>
               {imageTools.map((imageTool) => (
               <img src={imageTool.title} alt={imageTool.des}>
-              </img>       
+              </img>
               ))}
         </div>
         <AboutMe />
         <Gallery/>
-        {/* <Work /> */}
-        {/* <Item /> */}
- 
         <Contact />
         {/* Add other components and content as needed */}
     </div>
