@@ -5,8 +5,8 @@
     top: 0;
     width: 100%;
     z-index: 20;
-    background-color: crimson;
-}
+    background: rgb(127,190,252);
+    background: radial-gradient(circle, rgba(127,190,252,1) 0%, rgba(148,187,233,1) 100%);}
 .title p {
     margin: 2px;
     font-size: 36px;
