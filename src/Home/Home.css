@@ -7,7 +7,6 @@
 .homeWrap{
     margin: 0 350px;
     display: flex;
-    /* margin-bottom: 200px; */
     margin-top: 200px;
 }
 .homeContainer{
@@ -77,10 +76,11 @@
     color:#646464 ;
 }
 .toolList img{
-    width: 5%;
-    margin: 0;
+    width: 10%;
+    margin: 0; 
     height: auto;
-    padding: 30px;
     cursor: pointer;
-    
 }
+/* .toolList img{
+    cursor: pointer;
+} */

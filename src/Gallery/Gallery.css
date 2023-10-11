@@ -9,16 +9,15 @@
     font-weight: bold;
 }
 .gallery p{
-    padding:0px 200px 80px 424px;
+    padding:0px 424px 80px 424px;
     font-size: 17px;
     font-family: auto;
     font-weight: lighter;
     color: #646464;
     text-indent: 20px;
     text-align:inherit;
-    width: 50%;
     display: flex;
-    justify-content: start;
+    justify-content: center;
 }
 .galleryContainer{
     display: grid;

@@ -2,8 +2,6 @@ import React from 'react'
 import './Home.css';
 import Header from '../Header/Header';
 import AboutMe from '../AboutMe/AboutMe';
-import Work from '../Work/Work';
-import Resume from '../Resume/Resume';
 import Contact from '../Contact/Contact';
 import Gallery from '../Gallery/Gallery';
 import myPicture from '../images/izzuan.jpeg';
@@ -45,9 +43,6 @@ function Home() {
         </div>
         <AboutMe />
         <Gallery/>
-        {/* <Work /> */}
-        {/* <Item /> */}
- 
         <Contact />
         {/* Add other components and content as needed */}
     </div>
