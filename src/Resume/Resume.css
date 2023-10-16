@@ -7,7 +7,7 @@
     font-weight: bold;
 
 }
-.resume p{
+/* .resume p{
     font-size: 17px;
     font-weight: lighter;
     color: #646464;
@@ -15,4 +15,10 @@
     text-indent: 20px;
     text-align: justify;
     text-align: center;
+} */
+.bi-exclamation-circle{
+    display: flex;
+    width: 5px;
+    height: 5px;
+    /* background: blue; */
 }

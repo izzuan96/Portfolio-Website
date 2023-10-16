@@ -31,8 +31,7 @@
 .galleryContainer img{
     width: 50%;
     height: auto;
-    grid-column: span 1;
-
+    border-radius: 10%;
 }
 .card1,
 .card2,

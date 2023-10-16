@@ -1,5 +1,6 @@
 import React,{useEffect, useState} from 'react';
 import './Gallery.css';
+import Tooltip from '../ToolTip/ToolTip';
 import image1 from '../images/aboutme.jpeg';
 import image2 from '../images/msj2.jpeg';
 import image3 from '../images/msj3.jpeg';
@@ -15,6 +16,7 @@ import image12 from '../images/ntr4.jpeg';
 import image13 from '../images/bld.jpeg';
 import image14 from '../images/gls.jpeg';
 import image15 from '../images/tea.jpeg';
+// import { Tooltip } from 'bootstrap';
 
 
 function Gallery() {
@@ -81,7 +83,7 @@ function Gallery() {
 
   return (
    <div className='gallery' id='gallery'>
-    <h4>Gallery for display</h4>
+    <h4>Gallery for display</h4><Tooltip/>
     <p>I captured a stunning array of images using my smartphone, seamlessly blending the architectural wonders of towering buildings with the serene beauty of untouched nature. Each picture tells a unique story, showcasing the harmonious coexistence of human-made marvels and the unspoiled grace of the natural world, a testament to the beauty of our planet.</p>
     <div className='galleryContainer'>
       <div className='card1'>
