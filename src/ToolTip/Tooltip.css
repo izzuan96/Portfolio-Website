@@ -1,21 +1,23 @@
 /* Tooltip.css */
 .tooltip-container {
     position: relative;
+    left: 7px;
+    top: -10px;
     display: inline-block;
   }
   
   .tooltip-text {
     visibility: hidden;
     background-color: #333;
-    color: blue;
+    color: #646464;
     text-align: center;
     border-radius: 4px;
-    padding: 5px;
+    padding: 15px;
     position: absolute;
     z-index: 1;
     bottom: 125%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 100%;
+    transform: translateX(-10%);
     opacity: 0;
     transition: opacity 0.2s;
   }

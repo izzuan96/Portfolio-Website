@@ -16,3 +16,9 @@
     text-align: justify;
     text-align: center;
 } */
+.bi-exclamation-circle{
+    display: flex;
+    width: 5px;
+    height: 5px;
+    /* background: blue; */
+}

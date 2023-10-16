@@ -12,7 +12,9 @@ function Resume() {
         <a href="/Izzuan.pdf" download>
         <i class="bi bi-download"></i>
         </a>
-        <ToolTip text="test"/>
+        <ToolTip text="Click to download Resume">
+          <i class="bi bi-exclamation-circle" style={{fontSize: '11px'}}></i>
+        </ToolTip>
       </p>
     </section>
   );
