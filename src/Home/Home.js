@@ -5,6 +5,7 @@ import AboutMe from '../AboutMe/AboutMe';
 import Contact from '../Contact/Contact';
 import Gallery from '../Gallery/Gallery';
 import myPicture from '../images/izzuan.jpeg';
+import Weather from '../Weather/Weather.js';
 import image1 from '../images/js.png';
 import image2 from '../images/html.png';
 import image3 from '../images/css.png';
@@ -42,6 +43,7 @@ function Home() {
               ))}
         </div>
         <AboutMe />
+        <Weather/>
         <Gallery/>
         <Contact />
         {/* Add other components and content as needed */}
