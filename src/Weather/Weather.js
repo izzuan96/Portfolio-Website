@@ -32,9 +32,9 @@ function Weather() {
   const [weatherData, setWeatherData] = useState(null);
 
   useEffect(() => {
-    const apiKey = 'YOUR_API_KEY_HERE';
+    const apiKey = '65bd18f92e765fea58b2395be99342e2';
     const city = 'New York'; // Replace with the desired city
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=newyork&appid=65bd18f92e765fea58b2395be99342e2`;
 
     axios.get(apiUrl)
       .then((response) => {
