@@ -1,0 +1,38 @@
+/* profile.css */
+.profileContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.profilePicture {
+    margin-left: 20px;
+}
+
+.profilePicture img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profilePicture img:hover {
+    transform: scale(1.05);
+}
+
+.profileText h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.profileText p {
+    color: #646464;
+}
+
+.dark-mode .profileContainer h1{
+    color: #e0e0e0;
+    /* Ensure this is correct for dark mode */
+}

@@ -1,0 +1,118 @@
+/* TechStackCarousel.css */
+.tech-stack-carousel {
+  padding: 20px;
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.carousel-item-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.carousel-logo {
+  width: 50px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-logo:hover {
+  transform: scale(1.1);
+}
+
+.carousel-caption h3 {
+  color: #000; /* Default light mode color */
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  margin-top: 10px;
+}
+
+/* Custom arrow styles */
+.carousel-icon {
+  color: #333; /* Default light mode color */
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.4); /* Light mode background */
+  border-radius: 50%;
+  padding: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Arrow hover effect */
+.carousel-icon:hover {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+/* Positioning the arrows closer to the content */
+.next-icon {
+  right: 10px;
+}
+
+.prev-icon {
+  left: 10px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Light mode indicator styles */
+.carousel-indicators button {
+  background-color: #04010194 !important; /* Dark color for indicators in light mode */
+}
+
+/* Light mode active indicator styles */
+.carousel-indicators .active {
+  background-color: #007bff !important; /* Highlight color for active indicator */
+}
+
+/* Dark mode styles */
+.dark-mode .carousel-caption h3 {
+  color: #e0e0e0; /* Light gray for text in dark mode */
+}
+.dark-mode .carousel-indicators button {
+  background-color: #e0e0e0 !important; /* Light gray for text in dark mode */
+}
+
+.dark-mode .carousel-icon {
+  color: #e0e0e0; /* Light color for arrows in dark mode */
+  background: rgba(50, 50, 50, 0.4); /* Darker background */
+}
+
+.dark-mode .carousel-icon:hover {
+  background-color: rgba(255, 255, 255, 0.4) !important; /* Use !important to override */
+  color: #fff !important;
+  background: #63B3ED; /* light Blue for light mode */
+}
+
+.dark-mode .tech-stack-carousel {
+  background-color: #121212; /* Dark background for the carousel container */
+  color: #e0e0e0; /* Light color for text */
+}
+
+.dark-mode .carousel-indicators li {
+  background-color: #727272; /* Slightly lighter dark color for better visibility */
+}
+
+/* Dark mode active indicator styles */
+.dark-mode .carousel-indicators .active {
+  background-color: #FDCB82 !important; /* Dodger Blue for active indicator */
+}

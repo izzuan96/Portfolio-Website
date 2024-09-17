@@ -1,0 +1,14 @@
+/* title.css */
+.title {
+  font-family: 'Arial', sans-serif; /* Example font family */
+  font-size: 2rem; /* Example font size */
+  color: #333; /* Default light mode text color */
+  text-align: center; /* Center the text */
+  margin: 20px 0; /* Add margin for spacing */
+  transition: color 0.3s ease; /* Smooth transition for color changes */
+}
+
+/* Dark mode styles */
+.dark-mode .title {
+  color: #e0e0e0; /* Light color for text in dark mode */
+}
