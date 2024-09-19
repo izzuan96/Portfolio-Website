@@ -143,3 +143,10 @@
 .dark-mode .homePicture img {
   border: solid 1px #444; /* Darker border color for images */
 }
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
