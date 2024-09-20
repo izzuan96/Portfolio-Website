@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
-import Header from './Header/Header';
-import AboutMe from './AboutMe/AboutMe';
-import Work from './Work/Work';
-import Resume from './Resume/Resume';
-import Contact from './Contact/Contact';
-import Gallery from './Gallery/Gallery';
-import Item from './Item/Item';
-import AboutMePage from './pages/AboutMePage';
-import AppRouter from './AppRouter';
 import Home from './Home/Home';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem('darkMode') === 'true';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('darkMode', darkMode);
+    document.documentElement.classList.toggle('dark-mode', darkMode);
+  }, [darkMode]);
+
+  const toggleDarkMode = () => {
+    setDarkMode(prevMode => !prevMode);
+  };
+
   return (
-  <div className="App" id='App'>
-     <Home/>
-  </div>
+    <div className="App" id="App">
+      <button onClick={toggleDarkMode} className="dark-mode-toggle">
+        <FontAwesomeIcon icon={darkMode ? faSun : faMoon} className={darkMode ? 'sun-icon' : 'moon-icon'} />
+      </button>
+      <Home />
+    </div>
   );
 }
 

@@ -1,50 +1,44 @@
-.App {
-  /* text-align: center;
-  display: grid;
-  grid-template-rows:auto;
-  grid-template-columns: repeat(12, 1fr);
-  font-family: 'Open Sans', Arial, sans-serif; */
-}
-.meta{
-  content: '';
-  width: 25px;
-  border-top: 4px solid #fff;
-  display: block;
-  margin: 0 auto;
-  margin-top: 25px;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* App.css */
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border: none; /* Remove border */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+  background: rgba(255, 255, 255, 0.2); /* Dark background for light mode */
+  z-index: 1000; /* Ensure it's above other content */
 }
 
-.App-link {
-  color: #61dafb;
+/* Dark mode toggle button */
+.dark-mode .dark-mode-toggle {
+  background:rgba(0, 0, 0, 0.2);/* Light background for dark mode */
+  backdrop-filter: blur(5px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Sun Icon (Light Mode) */
+.sun-icon {
+  color: #FFD700; /* Golden yellow */
+}
+
+/* Moon Icon (Dark Mode) */
+.moon-icon {
+  color: #515151; /* Light gray */
+}
+
+/* Hover effect for the sun icon */
+.dark-mode-toggle:hover  {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Darker shadow */
+  backdrop-filter: blur(10px); /* Increased blur effect on hover */
+}
+
+/* Hover effect for the moon icon */
+.dark-mode .dark-mode-toggle:hover {
+  box-shadow: 0 6px 15px rgba(241, 215, 21, 0.467) !important; /* Lighter shadow for better contrast */
+  backdrop-filter: blur(10px); /* Increased blur effect on hover */
 }

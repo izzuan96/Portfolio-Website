@@ -1,87 +1,152 @@
-.home{
-    text-align: center;
-    grid-template-rows:auto;
-    grid-template-columns: repeat(12, 1fr);
-    font-family: 'Open Sans', Arial, sans-serif;
+/* General styles */
+.home {
+  text-align: center;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(12, 1fr);
+  font-family: 'Open Sans', Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-.homeWrap{
-    margin: 0 350px;
-    display: flex;
-    margin-top: 300px;
-    margin-bottom:100px ;
+
+/* Wrapper styles */
+.homeWrap {
+  margin: 0 350px;
+  display: flex;
+  margin-top: 300px;
+  margin-bottom: 100px;
 }
-.homeContainer{
-    text-align: start;
-    margin-left: 200px;
+
+/* Container styles */
+.homeContainer {
+  text-align: start;
+  margin-left: 200px;
 }
-.homeContainer h1{
-    width: 300px;
-    height: auto;
-    font-size: 36px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+
+/* Header styles */
+.homeContainer h1 {
+  width: 300px;
+  height: auto;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
-.homeContainer p{
-    font-size: 16px;
-    font-weight: lighter;
-    color: #646464;
-    font-family: auto;
+
+/* Paragraph styles */
+.homeContainer p {
+  font-size: 16px;
+  font-weight: lighter;
+  color: #646464;
+  font-family: auto;
+  transition: color 0.3s ease;
 }
+
+/* Picture container styles */
 .homePicture {
-    display: flex;
-    height: auto;
-    width: 100%;
-    justify-content: center;
-  }
-.homePicture img{
-    background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
-    animation: morph 8s ease-in-out infinite;
+  display: flex;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Picture styles */
+.homePicture img {
+  background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+  animation: morph 5s ease-in-out infinite;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  height: auto;
+  transition: all 1s ease-in-out;
+  width: 40%;
+  z-index: 5;
+  border: solid 1px #7fbefc;
+  margin-right: 120px;
+  cursor: pointer;
+}
+
+/* Keyframes for morph animation */
+@keyframes morph {
+  0% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    height: auto;
-    transition: all 1s ease-in-out;
-    width: 40%;
-    z-index: 5;
-    border: solid 1px #7fbefc;
-    margin-right: 120px;
-    cursor: pointer;
+    background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
   }
-  
-  @keyframes morph {
-    0% {
-              border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
-              background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
-      } 
-      
-      50% {
-              border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
-              background: linear-gradient(45deg, var(--third) 0%, var(--secondary) 100%);
-      }
-    
-      100% {
-          border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
-          background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
-      } 
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    background: linear-gradient(45deg, var(--third) 0%, var(--secondary) 100%);
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+  }
 }
-.toolList{
-    display: flex;
-    margin: 0 350px 280px;
-    justify-content: start;
-    align-items: center;
-    width: 50%;
-    padding-left: 200px;
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
 }
-.toolList p{
-    font-family: auto;
-    font-size: 27px;
-    font-weight: lighter;
-    color:#646464 ;
+
+::-webkit-scrollbar-track {
+  background: #fff; /* White track */
 }
-.toolList img{
-    width: 10%;
-    margin: 0; 
-    height: auto;
-    cursor: pointer;
+
+/* Light mode scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #63B3ED; /* Lighter blue border */
+  border-radius: 5px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 0 15px rgba(54, 125, 178, 0.4); /* Darker blue shadow */
 }
-/* .toolList img{
-    cursor: pointer;
-} */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4A90E2; /* Slightly darker blue on hover */
+}
+
+/* Dark mode scrollbar */
+.dark-mode ::-webkit-scrollbar-thumb {
+  background: #FDCB82; /* Yellowish-orange border */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 0 15px rgba(253, 203, 130, 0.6); /* Neon-like shadow */
+}
+
+.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: #F6B93B; /* Slightly darker yellow-orange on hover */
+}
+
+/* Dark mode styles */
+.dark-mode .home {
+  color: #e0e0e0;
+  background-color: #121212;
+}
+
+.dark-mode .homeContainer h1 {
+  color: #e0e0e0;
+}
+
+.dark-mode .homeContainer p {
+  color: #b0b0b0;
+}
+
+.dark-mode .homePicture img {
+  border: solid 1px #444;
+}
+
+.dark-mode .homeWrap {
+  background-color: #1c1c1c; /* Adjust as needed */
+}
+
+.dark-mode .homeContainer h1 {
+  color: #e0e0e0; /* Light text color for dark mode */
+}
+
+.dark-mode .homeContainer p {
+  color: #b0b0b0; /* Slightly lighter color for paragraphs */
+}
+
+.dark-mode .homePicture img {
+  border: solid 1px #444; /* Darker border color for images */
+}
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}

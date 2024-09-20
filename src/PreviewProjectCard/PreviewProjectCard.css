@@ -1,0 +1,81 @@
+.preview-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  padding: 0px 150px;
+}
+
+.preview-card {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 250px;
+  height: 210px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.745);
+  background: rgba(255, 255, 255, 0.8); /* Glassmorphism effect */
+  backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+  transition: opacity 0.3s ease-in-out;
+  text-decoration: none; /* Remove underline for links */
+}
+
+.preview-card.locked {
+  cursor: not-allowed; /* Ensure locked cards aren't clickable */
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.coming-soon-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1; /* Overlay above other content */
+}
+
+.lock-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem; /* Increased size for better visibility */
+  color: rgba(255, 255, 255, 1); /* More visible color */
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.preview-card.locked:hover .coming-soon-image {
+  opacity: 0.8; /* Increased visibility on hover */
+}
+
+.preview-card.locked:hover .lock-icon {
+  opacity: 1; /* Show lock icon on hover */
+}
+
+.project-title {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #333;
+  text-decoration: none; /* Remove underline for links */
+}
+
+.locked-title {
+  color: #888; /* Adjust color for locked title */
+}

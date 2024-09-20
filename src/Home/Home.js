@@ -1,54 +1,21 @@
-import React from 'react'
+import React from 'react';
 import './Home.css';
-import Header from '../Header/Header';
-import AboutMe from '../AboutMe/AboutMe';
-import Contact from '../Contact/Contact';
-import Gallery from '../Gallery/Gallery';
-import myPicture from '../images/izzuan.jpeg';
-import Weather from '../Weather/Weather.js';
-import image1 from '../images/js.png';
-import image2 from '../images/html.png';
-import image3 from '../images/css.png';
-import image4 from '../images/bootstrap.png';
-
-
+import Profile from '../profile/profile';
+import Work from '../WorkExperiences/work';
+import TechStackCarousel from '../TechStackCarousel/TechStackCarousel';
+import SocialLinks from '../Sociallinks/SocialLinks';
+import PreviewProjectsGrid from '../PreviewProjectsGrid/PreviewProjectsGrid'; // Use the correct import
 
 function Home() {
-
-  const imageTools = [
-    {title: image1, des:"javascript"},
-    {title: image2, des:"html"},
-    {title: image3, des:"css"},
-    {title: image4, des:"bootstrap"}
-  ];
-
   return (
-    <>
     <div className='home'>
-        <Header/>
-          <div className='homeWrap'>
-          <div className='homeContainer'>
-            <h1>Front-End React Developer</h1>
-            <p>Hi, I'm Izzuan Zawawi. A passionate Front-End React Developer. Turning Lines of Code into Reality!</p>
-          </div>
-          <div className='homePicture'>
-            <img src={myPicture} alt='my picture'></img>
-          </div>
-        </div>
-        <div className='toolList' >
-              <p>Tech stack |</p>
-              {imageTools.map((imageTool) => (
-              <img src={imageTool.title} alt={imageTool.des}>
-              </img>
-              ))}
-        </div>
-        <AboutMe />
-        <Weather/>
-        <Gallery/>
-        <Contact />
-        {/* Add other components and content as needed */}
+      <Profile />
+      <Work />
+      <TechStackCarousel />
+      <SocialLinks />
+      <PreviewProjectsGrid /> 
     </div>
-    </>
-  )
+  );
 }
+
 export default Home;

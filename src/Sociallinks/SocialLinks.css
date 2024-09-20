@@ -1,0 +1,69 @@
+/* Floating sidebar for social links with individual blurred containers */
+.social-links-sidebar {
+    position: fixed;
+    bottom: 20px; /* Adjusted to bottom right */
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  .social-link-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px; /* Adjusted padding for larger icons */
+    border-radius: 50%;
+    transition: box-shadow 0.3s ease, backdrop-filter 0.3s ease; /* Add transition for backdrop-filter */
+    background: rgba(255, 255, 255, 0.2); /* Light background for blur effect */
+    backdrop-filter: blur(5px); /* Initial blur */
+  }
+  
+  /* Hover effect with blur */
+  .social-link-item:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px); /* Apply blur effect on hover */
+  }
+  
+  /* Increased icon size */
+  .social-link-icon {
+    font-size: 1.5rem; /* Adjusted size for larger icons */
+  }
+  
+  /* Specific icon colors */
+  .social-icon.github-icon {
+    color: #6e5494; /* Purple color for GitHub */
+  }
+  
+  .social-icon.linkedin-icon {
+    color: #0077B5; /* LinkedIn color */
+  }
+  
+  .social-icon.email-icon {
+    color: #FF6F61; /* Email color */
+  }
+  
+  /* Dark mode styles */
+  .dark-mode .social-link-item {
+    color: #e0e0e0;
+    background: rgba(0, 0, 0, 0.2); /* Darker background for blur effect */
+  }
+  
+  .dark-mode .social-link-item:hover {
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px); /* Apply blur effect on hover */
+  }
+  
+  .dark-mode .social-icon.github-icon {
+    color: #6e5494; /* Purple color for GitHub in dark mode */
+  }
+  
+  .dark-mode .social-icon.linkedin-icon {
+    color: #0077B5; /* LinkedIn color in dark mode */
+  }
+  
+  .dark-mode .social-icon.email-icon {
+    color: #FF6F61; /* Email color in dark mode */
+  }
+  
