@@ -1,0 +1,8 @@
+.wave-separator {
+    display: block;
+    width: 100%; /* Ensure it covers the full width */
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  

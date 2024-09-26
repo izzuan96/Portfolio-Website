@@ -1,106 +1,80 @@
-.workGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /* 2 columns */
-  gap: 20px;
-  /* Space between grid items */
-  padding: 20px;
-  margin: auto;
+.workList {
+  width: 60%;
+  margin: 0 auto; /* Center the container */
+  background-color: #E1F3FB;
 }
 
 .workItem {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start; /* Align items to the top-left */
   padding: 20px;
-  border-radius: 8px;
+  margin-bottom: 20px;
   background-color: #fff;
-  /* Light background for items */
-  transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;
-  height: 300px;
-  /* Fixed height for uniformity */
-  position: relative;
-  border: 1px solid #63B3ED;
-  /* Lighter blue border for light mode */
-  box-shadow: 0 2px 5px rgba(99, 179, 237, 0.3);
-  /* Softer blue shadow for normal state */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(99, 179, 237, 0.3); /* Softer shadow */
+  transition: box-shadow 0.3s;
+  text-align: left; /* Ensure text starts from the left */
 }
 
 .workItem:hover {
-  background-color: #f9f9f9;
-  /* Slightly darker background on hover */
-  box-shadow: 0 4px 8px rgba(54, 125, 178, 0.4), 0 0 10px rgba(54, 125, 178, 0.3);
-  /* Subtler blue shadow on hover */
-}
-
-
-.dark-mode .workItem {
-  background-color: #2e2e2e;
-  /* Dark background for items */
-  color: #e0e0e0;
-  /* Light color for text */
-  border: 1px solid #FDCB82;
-  /* Yellowish-orange border in dark mode */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 0 15px rgba(253, 203, 130, 0.6);
-  /* Neon-like shadow in dark mode */
-}
-
-.dark-mode .workItem:hover {
-  background-color: #3a3a3a;
-  /* Slightly lighter dark background on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6), 0 0 20px rgba(253, 203, 130, 0.8);
-  /* More pronounced neon shadow on hover */
+  box-shadow: 0 4px 8px rgba(99, 179, 237, 0.6); /* Stronger shadow on hover */
 }
 
 .imgcontainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-  /* Fixed height for the image container */
-  overflow: hidden;
-  /* Ensure logos don't overflow */
+  flex: 0 0 100px; /* Fixed width for the logo */
+  margin-right: 20px; /* Space between image and text */
 }
 
 .imgcontainer img {
-  height: 100%;
-  /* Ensure logo fits the container height */
-  object-fit: contain;
-  /* Maintain aspect ratio */
-  max-width: 100px;
-  /* Limit max width */
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Ensure the logo is fully visible */
 }
 
 .description {
-  text-align: center;
-  flex: 1;
-  /* Allow description to grow and fill remaining space */
+  flex: 1; /* Fill remaining space */
+  text-align: left; /* Ensure description text aligns to the left */
 }
 
 .description h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 10px;
+  text-align: left; /* Left align the company name */
 }
 
 .description p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #666;
-  /* Dark gray text for description */
+  text-align: left; /* Left align the description text */
+}
+
+/* Dark Mode Support */
+.dark-mode .workItem {
+  background-color: #2e2e2e;
+  color: #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 .dark-mode .description p {
   color: #b0b0b0;
-  /* Lighter gray text for description in dark mode */
 }
 
 .dark-mode .description h2 {
   color: #e0e0e0;
-  /* Light color for headings in dark mode */
 }
 
+/* Responsive for smaller screens */
 @media (max-width: 768px) {
-  .workGrid {
-    grid-template-columns: 1fr;
-    /* Single column layout on small screens */
+  .workList {
+    width: 90%;
+  }
+
+  .workItem {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .imgcontainer {
+    margin-bottom: 15px;
   }
 }

@@ -4,7 +4,7 @@ import MaybankIcon from '../images/maybank-avatar.svg';
 import ApmIcon from '../images/APM.png';
 import AccentureIcon from '../images/Accenture.svg.png';
 import SlbIcon from '../images/slb.png';
-import "./work.css";
+import './work.css';
 
 const workExperiences = [
   {
@@ -37,7 +37,7 @@ function Work() {
   return (
     <>
       <Title text="Career Milestones" className="custom-class" />
-      <div className='workGrid'>
+      <div className='workList'>
         {workExperiences.map(experience => (
           <div key={experience.id} className='workItem'>
             <div className='imgcontainer'>
