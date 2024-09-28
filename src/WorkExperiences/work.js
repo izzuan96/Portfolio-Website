@@ -4,6 +4,7 @@ import MaybankIcon from '../images/maybank-avatar.svg';
 import ApmIcon from '../images/APM.png';
 import AccentureIcon from '../images/Accenture.svg.png';
 import SlbIcon from '../images/slb.png';
+import Separator from '../Separator/Separator';
 import './work.css';
 
 const workExperiences = [
@@ -36,19 +37,22 @@ const workExperiences = [
 function Work() {
   return (
     <>
-      <Title text="Career Milestones" className="custom-class" />
-      <div className='workList'>
-        {workExperiences.map(experience => (
-          <div key={experience.id} className='workItem'>
-            <div className='imgcontainer'>
-              <img src={experience.logo} alt={`${experience.company} logo`} />
+      <div className='work-wrap'>
+        <Title text="Career Milestones" className="custom-class" />
+        <div className='workList'>
+          {workExperiences.map(experience => (
+            <div key={experience.id} className='workItem'>
+              <div className='imgcontainer'>
+                <img src={experience.logo} alt={`${experience.company} logo`} />
+              </div>
+              <div className='description'>
+                <h2>{experience.company}</h2>
+                <p>{experience.description}</p>
+              </div>
             </div>
-            <div className='description'>
-              <h2>{experience.company}</h2>
-              <p>{experience.description}</p>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <Separator nextBgColor="#ABE7FE" height="auto" waveType="wave1" />
       </div>
     </>
   );

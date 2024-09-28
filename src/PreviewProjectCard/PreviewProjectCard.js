@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './PreviewProjectCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
@@ -9,7 +8,7 @@ const PreviewProjectCard = ({ image, title, isLocked, projectLink }) => {
   return (
     <div className="preview-card-container">
 
-      <div 
+      <div
         className={`preview-card ${isLocked ? 'locked' : ''}`}
         style={{ cursor: isLocked ? 'not-allowed' : 'pointer' }} // Change cursor for locked items
       >
@@ -21,7 +20,7 @@ const PreviewProjectCard = ({ image, title, isLocked, projectLink }) => {
           </>
         )}
       </div>
-      <a 
+      <a
         href={!isLocked ? projectLink : "#"}
         className={`project-title ${isLocked ? 'locked-title' : ''}`}
         onClick={(e) => { if (isLocked) e.preventDefault(); }} // Prevent default behavior if locked

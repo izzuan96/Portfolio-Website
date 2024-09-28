@@ -1,3 +1,8 @@
+.work-wrap{
+  background-color:#E1F3FB ;
+  height: 1000px;
+}
+
 .workList {
   width: 60%;
   margin: 0 auto; /* Center the container */

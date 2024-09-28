@@ -1,9 +1,14 @@
 /* TechStackCarousel.css */
 .tech-stack-carousel {
-  padding: 20px;
+  background-color: #ABE7FE;
+  height: 650px;
+}
+
+.tech-stack{
+  padding-top: 20px;
   position: relative;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 70px auto 0px auto;
 }
 
 .carousel-item-content {

@@ -13,7 +13,6 @@ function Home() {
       <Profile />
       <Separator nextBgColor="#E1F3FB" height="auto" waveType="wave2" />
       <Work />
-      <Separator nextBgColor="#CDC2A5" height="auto" waveType="wave2" />
       <TechStackCarousel />
       <SocialLinks />
       <PreviewProjectsGrid />
