@@ -5,7 +5,6 @@
   font-size: 1.5rem; /* Adjusted font size */
   color: #333; /* Default color for light mode */
   text-align: center; /* Center the text */
-  margin: 20px 0; /* Add margin for spacing */
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for color changes */
 }
 

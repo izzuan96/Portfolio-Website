@@ -2,7 +2,13 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
   gap: 20px;
-  padding: 20px;
+  padding: 30px 20px 80px 20px;
+  margin: 0 180px;
+}
+.project-wrap{
+  background-color:#E1F3FB;
+  height: 500px;
+  padding-top: 35px;
 }
 
 .preview-card-container {
