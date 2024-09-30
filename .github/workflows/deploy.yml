@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3  # Updated to v3
 
       - name: Install Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3  # Updated to v3
         with:
-          node-version: '14'
+          node-version: '20'  # Use the latest LTS version
 
       - name: Install dependencies
         run: npm install
@@ -26,8 +26,8 @@ jobs:
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
-          server: ${{ secrets.FTP_SERVER }}  # FTP Server
-          username: ${{ secrets.FTP_USERNAME }}  # FTP Username
-          password: ${{ secrets.FTP_PASSWORD }}  # FTP Password
-          local-dir: ./build  # The build folder to upload
-          server-dir: /public_html  # The folder on the server
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./build
+          server-dir: /public_html
