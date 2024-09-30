@@ -12,6 +12,7 @@ body, html {
     height: 54vh;
     background-color: #fff; /* Default white background */
     padding: 0 20px;
+    margin-top: 20px;
     transition: background-color 0.3s ease;
   }
   
@@ -54,7 +55,7 @@ body, html {
   
   /* Dark mode */
   .dark-mode .profile-container {
-    background-color: #222; /* Dark mode background */
+    background-color: #121212; /* Dark mode background */
   }
   
   .dark-mode .profile-text h1 {
