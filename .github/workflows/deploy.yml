@@ -3,7 +3,7 @@ name: Deploy React App
 on:
   push:
     branches:
-      - Izzuan/HomePage
+      - main  # or your branch name
 
 jobs:
   build:
@@ -12,19 +12,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Set CI to false
+        run: echo "CI=false" >> $GITHUB_ENV
+
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: '20'  # Use the latest LTS version
 
       - name: Install dependencies
         run: npm install
 
       - name: Build
         run: npm run build
-
-      - name: List files
-        run: ls -al  # This will show the current directory contents for debugging
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
