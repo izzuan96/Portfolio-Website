@@ -2,7 +2,6 @@ import React from 'react';
 import Title from '../Title/Title';
 import PreviewProjectCard from '../PreviewProjectCard/PreviewProjectCard';
 import projectImage from '../images/appleWebsite.png'; // Import the image or ensure it's correctly referenced
-import Separator from '../Separator/Separator';
 import './PreviewProjectsGrid.css'
 
 const projects = [

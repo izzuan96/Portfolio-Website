@@ -7,7 +7,6 @@ import comingSoonImage from '../images/comingsoon.jpg'; // Ensure this path is c
 const PreviewProjectCard = ({ image, title, isLocked, projectLink }) => {
   return (
     <div className="preview-card-container">
-
       <div
         className={`preview-card ${isLocked ? 'locked' : ''}`}
         style={{ cursor: isLocked ? 'not-allowed' : 'pointer' }} // Change cursor for locked items
@@ -21,8 +20,10 @@ const PreviewProjectCard = ({ image, title, isLocked, projectLink }) => {
         )}
       </div>
       <a
-        href={!isLocked ? projectLink : "#"}
+        href={!isLocked ? projectLink : undefined}
         className={`project-title ${isLocked ? 'locked-title' : ''}`}
+        role={isLocked ? 'button' : undefined}
+        tabIndex={isLocked ? 0 : undefined}
         onClick={(e) => { if (isLocked) e.preventDefault(); }} // Prevent default behavior if locked
       >
         {title}
