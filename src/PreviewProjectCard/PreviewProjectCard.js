@@ -19,15 +19,23 @@ const PreviewProjectCard = ({ image, title, isLocked, projectLink }) => {
           </>
         )}
       </div>
-      <a
-        href={!isLocked ? projectLink : undefined}
-        className={`project-title ${isLocked ? 'locked-title' : ''}`}
-        role={isLocked ? 'button' : undefined}
-        tabIndex={isLocked ? 0 : undefined}
-        onClick={(e) => { if (isLocked) e.preventDefault(); }} // Prevent default behavior if locked
-      >
-        {title}
-      </a>
+      
+      {!isLocked ? (
+        <a
+          href={projectLink}
+          className="project-title"
+        >
+          {title}
+        </a>
+      ) : (
+        <button
+          className="project-title locked-title"
+          disabled
+          aria-disabled="true"
+        >
+          {title}
+        </button>
+      )}
     </div>
   );
 };
