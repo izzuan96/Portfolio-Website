@@ -3,7 +3,7 @@ name: Deploy React App
 on:
   push:
     branches:
-      - main  # or your branch name
+      - main
 
 jobs:
   build:
@@ -26,8 +26,8 @@ jobs:
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
-          server: ${{ secrets.FTP_SERVER }}  # This should be your FTP IP
-          username: ${{ secrets.FTP_USERNAME }}  # Your FTP username
-          password: ${{ secrets.FTP_PASSWORD }}  # Your FTP password
-          local-dir: ./build/  # Make sure it ends with a /
+          server: "153.92.11.17"  # Replace with your FTP IP address
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./build/
           server-dir: /public_html/
