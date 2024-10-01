@@ -3,7 +3,7 @@ name: Deploy React App
 on:
   push:
     branches:
-      - main
+      - main  # or your branch name
 
 jobs:
   build:
@@ -15,7 +15,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: '20'  # Use the latest LTS version
 
       - name: Install dependencies
         run: npm install
@@ -23,14 +23,12 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: List files
-        run: ls -al  # This will show the current directory contents for debugging
-
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      - name: Deploy via SFTP
+        uses: appleboy/scp-action@master
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./build
-          server-dir: /public_html
+          host: ${{ secrets.SFTP_SERVER }}  # Your FTP IP or domain
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          port: 22  # SFTP port (default is 22)
+          source: "./build/*"
+          target: "/public_html/"
