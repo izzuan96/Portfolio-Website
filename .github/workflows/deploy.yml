@@ -15,7 +15,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'  # Use the latest LTS version
+          node-version: '20'
 
       - name: Install dependencies
         run: npm install
@@ -23,12 +23,11 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy via SFTP
-        uses: appleboy/scp-action@master
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
-          host: ${{ secrets.SFTP_SERVER }}  # Your FTP IP or domain
-          username: ${{ secrets.SFTP_USERNAME }}
-          password: ${{ secrets.SFTP_PASSWORD }}
-          port: 22  # SFTP port (default is 22)
-          source: "./build/*"
-          target: "/public_html/"
+          server: ${{ secrets.FTP_SERVER }}  # This should be your FTP IP
+          username: ${{ secrets.FTP_USERNAME }}  # Your FTP username
+          password: ${{ secrets.FTP_PASSWORD }}  # Your FTP password
+          local-dir: ./build/  # Make sure it ends with a /
+          server-dir: /public_html/
