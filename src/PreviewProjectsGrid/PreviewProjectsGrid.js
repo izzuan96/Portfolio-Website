@@ -16,7 +16,7 @@ const PreviewProjectsGrid = () => {
   return (
     <>
       <div className="project-wrap">
-        <Title text="Sneak Peek Central: Future Projects in the Spotlight" className="custom-class" />
+        <Title text="Sneak Peek Central: Future Projects in the Spotlight" className="custom-class" color="#ffff" />
         <div className="projects-grid-container">
           {projects.map((project) => (
             <PreviewProjectCard

@@ -56,7 +56,7 @@ const TechStackCarousel = () => {
                         </Carousel.Item>
                     </Carousel>
                 </div>
-                <Separator nextBgColor="#E1F3FB" height="auto" waveType="wave4" />
+                <Separator nextBgColor="#384B70" height="auto" waveType="wave4" />
             </div>
         </>
     );

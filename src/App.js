@@ -21,9 +21,12 @@ function App() {
 
   return (
     <div className="App" id="App">
-      <button onClick={toggleDarkMode} className="dark-mode-toggle">
-        <FontAwesomeIcon icon={darkMode ? faSun : faMoon} className={darkMode ? 'sun-icon' : 'moon-icon'} />
-      </button>
+      <div className="dark-mode-toggle" onClick={toggleDarkMode}>
+        <div className={`toggle-icon ${darkMode ? 'active' : ''}`}>
+          <FontAwesomeIcon icon={faSun} className="icon sun-icon" />
+          <FontAwesomeIcon icon={faMoon} className="icon moon-icon" />
+        </div>
+      </div>
       <Home />
     </div>
   );
