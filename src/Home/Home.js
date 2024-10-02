@@ -11,7 +11,7 @@ function Home() {
   return (
     <div className='home'>
       <Profile />
-      <Separator nextBgColor="#E1F3FB" height="auto" waveType="wave2" />
+      <Separator nextBgColor="#384B70" height="auto" waveType="wave2" />
       <Work />
       <TechStackCarousel />
       <SocialLinks />

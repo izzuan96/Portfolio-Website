@@ -1,90 +1,102 @@
 /* Profile.css */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-  
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 54vh;
+  background-color: #fff;
+  /* Default white background */
+  padding: 0 20px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.profile-image img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  /* Soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image img:hover {
+  transform: scale(1.05);
+  /* Slightly enlarges on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  /* Enhanced shadow on hover */
+}
+
+.profile-text {
+  margin-right: 50px;
+  text-align: right;
+}
+
+.profile-text h1 {
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+  background: rgb(54, 136, 222);
+  background: linear-gradient(90deg, rgba(54,136,222,0.9) 24%, rgba(41,67,111,1) 74%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.profile-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.profile-text p {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #646464;
+}
+
+/* Dark mode */
+.dark-mode .profile-container {
+  background-color: #121212;
+  /* Dark mode background */
+}
+
+.dark-mode .profile-text h1 {
+  color: #fff;
+  /* White text for dark mode */
+}
+
+.dark-mode .profile-text h2 {
+  color: #e0e0e0;
+  /* Lighter text for dark mode */
+}
+
+.dark-mode .profile-text p {
+  color: #bbbbbb;
+  /* Softer text color for dark mode */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .profile-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 54vh;
-    background-color: #fff; /* Default white background */
-    padding: 0 20px;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
+    flex-direction: column;
+    /* Stack vertically for smaller screens */
   }
-  
-  .profile-image img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .profile-image img:hover {
-    transform: scale(1.05); /* Slightly enlarges on hover */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-  }
-  
+
   .profile-text {
-    margin-right: 50px;
-    text-align: right;
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
-  
-  .profile-text h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    color: #333;
+
+  .profile-image img {
+    width: 200px;
+    height: 200px;
   }
-  
-  .profile-text h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #666;
-  }
-  
-  .profile-text p {
-    font-size: 1.4rem;
-    font-style: italic;
-    color: #646464;
-  }
-  
-  /* Dark mode */
-  .dark-mode .profile-container {
-    background-color: #121212; /* Dark mode background */
-  }
-  
-  .dark-mode .profile-text h1 {
-    color: #fff; /* White text for dark mode */
-  }
-  
-  .dark-mode .profile-text h2 {
-    color: #e0e0e0; /* Lighter text for dark mode */
-  }
-  
-  .dark-mode .profile-text p {
-    color: #bbbbbb; /* Softer text color for dark mode */
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .profile-container {
-      flex-direction: column; /* Stack vertically for smaller screens */
-    }
-  
-    .profile-text {
-      text-align: center;
-      margin-right: 0;
-      margin-bottom: 20px;
-    }
-  
-    .profile-image img {
-      width: 200px;
-      height: 200px;
-    }
-  }
-  
+}

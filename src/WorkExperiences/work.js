@@ -38,7 +38,7 @@ function Work() {
   return (
     <>
       <div className='work-wrap'>
-        <Title text="Career Milestones" className="custom-class" />
+        <Title text="Career Milestones" className="custom-class" color ="#ffff" />
         <div className='workList'>
           {workExperiences.map(experience => (
             <div key={experience.id} className='workItem'>
@@ -52,7 +52,7 @@ function Work() {
             </div>
           ))}
         </div>
-        <Separator nextBgColor="#ABE7FE" height="auto" waveType="wave1" />
+        <Separator nextBgColor="#ffff" height="auto" waveType="wave1" />
       </div>
     </>
   );
