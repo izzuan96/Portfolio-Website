@@ -121,3 +121,22 @@
 .dark-mode .carousel-indicators .active {
   background-color: #FDCB82 !important; /* Dodger Blue for active indicator */
 }
+@media (max-width: 768px) {
+  .carousel-logo {
+    width: 40px;
+  }
+
+  .carousel-caption h3 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-logo {
+    width: 30px;
+  }
+
+  .carousel-caption h3 {
+    font-size: 0.7rem;
+  }
+}
