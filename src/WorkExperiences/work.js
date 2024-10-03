@@ -52,7 +52,6 @@ function Work() {
             </div>
           ))}
         </div>
-        <Separator nextBgColor="#ffff" height="auto" waveType="wave4" />
       </div>
     </>
   );

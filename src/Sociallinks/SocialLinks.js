@@ -9,7 +9,7 @@ import './SocialLinks.css';
 const SocialLinks = () => {
     return (
         <div className="social-links-sidebar">
-            <a href="https://github.com/yourusername" className="social-link-item" aria-label="GitHub">
+            <a href="https://github.com/izzuan96/Portfolio-Website.git" className="social-link-item" aria-label="GitHub">
                 <FontAwesomeIcon icon={faGithub} className="social-icon github-icon social-link-icon" />
             </a>
             <a href="https://www.linkedin.com/in/izzuan-zawawi-profile" className="social-link-item" aria-label="LinkedIn">
