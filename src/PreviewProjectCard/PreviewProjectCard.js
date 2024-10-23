@@ -7,34 +7,41 @@ import comingSoonImage from '../images/comingsoon.jpg'; // Ensure this path is c
 const PreviewProjectCard = ({ image, title, isLocked, projectLink }) => {
   return (
     <div className="preview-card-container">
-      <div
-        className={`preview-card ${isLocked ? 'locked' : ''}`}
-        style={{ cursor: isLocked ? 'not-allowed' : 'pointer' }} // Change cursor for locked items
-      >
-        <img src={image} alt={title} className={`project-image ${isLocked ? 'locked-image' : ''}`} />
-        {isLocked && (
-          <>
-            <img src={comingSoonImage} alt="Coming Soon" className="coming-soon-image" />
-            <FontAwesomeIcon icon={faLock} className="lock-icon" />
-          </>
-        )}
-      </div>
+      {!isLocked ? (
+        <a
+          href={projectLink}
+          className="preview-card"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ cursor: 'pointer' }} // Make sure the card is clickable
+        >
+          <img src={image} alt={title} className="project-image" />
+        </a>
+      ) : (
+        <div className="preview-card locked" style={{ cursor: 'not-allowed' }}>
+          <img src={image} alt={title} className="project-image locked-image" />
+          <img src={comingSoonImage} alt="Coming Soon" className="coming-soon-image" />
+          <FontAwesomeIcon icon={faLock} className="lock-icon" />
+        </div>
+      )}
       
       {!isLocked ? (
         <a
           href={projectLink}
           className="project-title"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {title}
         </a>
       ) : (
-        <button
+        <h1
           className="project-title locked-title"
           disabled
           aria-disabled="true"
         >
           {title}
-        </button>
+        </h1>
       )}
     </div>
   );

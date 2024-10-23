@@ -4,7 +4,6 @@ import MaybankIcon from '../images/maybank-avatar.svg';
 import ApmIcon from '../images/APM.png';
 import AccentureIcon from '../images/Accenture.svg.png';
 import SlbIcon from '../images/slb.png';
-import Separator from '../Separator/Separator';
 import './work.css';
 
 const workExperiences = [

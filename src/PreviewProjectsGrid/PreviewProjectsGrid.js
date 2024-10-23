@@ -1,13 +1,14 @@
 import React from 'react';
 import Title from '../Title/Title';
 import PreviewProjectCard from '../PreviewProjectCard/PreviewProjectCard';
-import projectImage from '../images/appleWebsite.png'; // Import the image or ensure it's correctly referenced
+import apple from '../images/appleWebsite.png'; 
+import wedding from '../images/wedding.png';// Import the image or ensure it's correctly referenced
 import './PreviewProjectsGrid.css'
 
 const projects = [
-  { id: 1, image: projectImage, title: 'Project 1', isLocked: false, projectLink: 'https://project2.com' },
-  { id: 2, image: projectImage, title: 'Project 2', isLocked: true, projectLink: '' },
-  { id: 3, image: projectImage, title: 'Project 3', isLocked: true, projectLink: '' },
+  { id: 1, image: wedding, title: 'Wedding Invitation', isLocked: false, projectLink: 'https://izzuanzawawi.com/iwenaz/' },
+  { id: 2, image: apple, title: 'Epal', isLocked: true, projectLink: 'https://project2.com' },
+  
 
   // Add more projects as needed
 ];
