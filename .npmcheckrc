@@ -1,0 +1,14 @@
+{
+  "depcheck": {
+    "ignoreMatches": [
+      "@heroicons/react",
+      "@mui/icons-material",
+      "@testing-library/user-event",
+      "axios",
+      "bootstrap-icons",
+      "dotenv",
+      "react-bootstrap",
+      "react-icons"
+    ]
+  }
+}

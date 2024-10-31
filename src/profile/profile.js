@@ -16,6 +16,11 @@ function Profile() {
           <img src={myPicture} alt="Izzuan Zawawi" />
         </div>
       </section>
+      <div className='profile-description'>
+        <p>
+          I am a visionary web developer who leverages AI to streamline my workflow.<br /> Unlike traditional methods, I generate code efficiently and accurately.<br /> With a deep understanding of AI, I can create complex web applications with minimal manual effort,<br /> ensuring faster development cycles and higher-quality results.
+        </p>
+      </div>
     </>
   );
 }

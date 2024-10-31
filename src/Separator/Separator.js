@@ -9,14 +9,27 @@ const waveStyles = {
   wave5: "M0,160 C240,100 480,220 720,180 C960,100 1200,220 1440,180 C1680,100 1920,220 2160,180 L2160,0 L0,0 Z"
 };
 
-const Separator = ({ height = '150px', waveType = 'wave1', nextBgColor = '#ffff', className, darkMode }) => {
+const Separator = ({ 
+  height = '150px', 
+  waveType = 'wave1', 
+  startColor, // Dynamically set start color
+  endColor,   // Dynamically set end color
+  className, 
+  darkMode 
+}) => {
   return (
     <svg
       viewBox="0 0 1440 320"
       className={`wave-separator ${className}`}
       style={{ height }}
     >
-      <path fill={darkMode ? '#121212' : nextBgColor} d={waveStyles[waveType]} />
+      <defs>
+        <linearGradient id="dynamicGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="24%" style={{ stopColor: startColor, stopOpacity: 1 }} />
+          <stop offset="74%" style={{ stopColor: endColor, stopOpacity: 1 }} />
+        </linearGradient>
+      </defs>
+      <path fill={darkMode ? '#121212' : 'url(#dynamicGradient)'} d={waveStyles[waveType]} />
     </svg>
   );
 };

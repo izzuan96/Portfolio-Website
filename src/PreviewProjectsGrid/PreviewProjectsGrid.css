@@ -7,9 +7,9 @@
 }
 
 .project-wrap {
-  background-color: #384B70;
+  background: linear-gradient(90deg, rgba(54, 136, 222, 0.9) 24%, rgba(41, 67, 111, 1) 74%);
   height: auto; /* Adjust height based on content */
-  padding-top: 80px;
+  padding-top: 40px;
 }
 
 .preview-card-container {

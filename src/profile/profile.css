@@ -74,6 +74,14 @@ html {
 .dark-mode .profile-text p {
   color: #bbbbbb;
 }
+.profile-description{
+  font-size: 1rem;
+  font-style: bold;
+  color: #646464;
+}
+.dark-mode .profile-description p{
+  color: #e0e0e0
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -92,6 +100,9 @@ html {
     width: 180px;
     height: 180px;
   }
+  .profile-description{
+    padding: 5px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -105,5 +116,8 @@ html {
 
   .profile-text p {
     font-size: 1.2rem;
+  }
+  .profile-description{
+    padding: 5px;
   }
 }

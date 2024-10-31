@@ -37,7 +37,7 @@ function Work() {
   return (
     <>
       <div className='work-wrap'>
-        <Title text="Career Milestones" className="custom-class" color ="#ffff" />
+        <Title text="Career Milestones" className="workList-title" color ="#ffff" />
         <div className='workList'>
           {workExperiences.map(experience => (
             <div key={experience.id} className='workItem'>

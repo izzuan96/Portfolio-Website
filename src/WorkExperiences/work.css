@@ -1,5 +1,5 @@
 .work-wrap {
-  background-color: #384b70;
+  background: linear-gradient(90deg, rgba(54, 136, 222, 0.9) 24%, rgba(41, 67, 111, 1) 74%);;
   height: auto;
   padding: 40px 0;
 }
@@ -7,7 +7,9 @@
 .workList {
   width: 60%;
   margin: 0 auto;
-  background-color: #384b70;
+}
+.workList-title{
+  padding-bottom: 30px;
 }
 
 .workItem {
