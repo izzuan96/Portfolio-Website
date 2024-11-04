@@ -6,9 +6,9 @@
 
 .tech-stack-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); /* Adjusted for smaller screens */
   gap: 16px; /* Space between cards */
-  padding: 20px;
+  padding: 60px 20px;
   max-width: 800px; /* Adjust as needed */
   margin: 0 auto; /* Center the grid */
   min-height: 300px; /* Set a minimum height */
@@ -26,6 +26,7 @@
 
 .tech-name {
   margin-top: 8px;
+  font-size: 12px;
 }
 
 .tech-card:hover {
@@ -73,21 +74,29 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .tech-stack-cards {
+    grid-template-columns: repeat(auto-fill, minmax(105px, 0.5fr)); /* More compact for small screens */
+    padding: 10px; /* Reduced padding for smaller devices */
+  }
   .tech-logo {
       width: 60px;
   }
 
-  .tech-card h3 {
+  .tech-card h4 {
       font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
+  .tech-stack-cards {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 0.5fr)); /* More compact for small screens */
+    padding: 10px; /* Reduced padding for smaller devices */
+  }
   .tech-logo {
       width: 50px;
   }
 
-  .tech-card h3 {
-      font-size: 0.8rem;
+  .tech-card h4 {
+      font-size: 0.6rem;
   }
 }
