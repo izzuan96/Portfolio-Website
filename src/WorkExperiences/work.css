@@ -1,5 +1,5 @@
 .work-wrap {
-  background: linear-gradient(90deg, rgba(54, 136, 222, 0.9) 24%, rgba(41, 67, 111, 1) 74%);;
+  background: linear-gradient(90deg, rgba(54, 136, 222, 0.9) 24%, rgba(41, 67, 111, 1) 74%);
   height: auto;
   padding: 40px 0;
 }
@@ -8,7 +8,8 @@
   width: 60%;
   margin: 0 auto;
 }
-.workList-title{
+
+.workList-title {
   padding-bottom: 30px;
 }
 
@@ -29,14 +30,21 @@
 }
 
 .imgcontainer {
-  flex: 0 0 100px;
+  display: flex;               /* Added flex display */
+  align-items: center;        /* Center vertically */
+  justify-content: center;     /* Center horizontally */
+  width: 100px;               /* Fixed width */
+  height: 100px;              /* Fixed height */
   margin-right: 20px;
+  overflow: hidden;           /* Hide any overflow */
+  background-color: #fff;    /* Optional background for better visibility */
+  border-radius: 8px;        /* Optional rounding for aesthetic */
 }
 
 .imgcontainer img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+  max-width: 100%;             /* Limit the image to 80% of container width */
+  max-height: 100%;            /* Limit the image to 80% of container height */
+  object-fit: contain;        /* Ensures image scales down without cropping */
 }
 
 .description {
@@ -54,7 +62,7 @@
   color: #666;
 }
 
-/* Dark Mode */
+/* Dark Mode Styles */
 .dark-mode .workItem {
   background-color: #2e2e2e;
   color: #e0e0e0;
@@ -69,7 +77,7 @@
   color: #e0e0e0;
 }
 
-/* Responsive for smaller screens */
+/* Responsive Styles */
 @media (max-width: 768px) {
   .workList {
     width: 90%;
@@ -81,10 +89,38 @@
   }
 
   .imgcontainer {
-    margin-bottom: 15px;
-  }
+    display: block; /* Make imgcontainer a block element */
+    margin: 0 auto; /* Center horizontally */
+    text-align: center; /* Center contents within the container */
+    margin-bottom: 15px; /* Space below each logo */  }
 
   .imgcontainer img {
-    width: 80px;
-  }
+    width: 80px; /* Adjust width for mobile */
+    height: auto; /* Keep aspect ratio */  }
+}
+
+.imgcontainer.accenture-class,
+.imgcontainer.maybank-class,
+.imgcontainer.apm-class,
+.imgcontainer.schlumberger-class {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.imgcontainer.maybank-class img,
+.imgcontainer.schlumberger-class img,
+.imgcontainer.accenture-class img {
+  width: 100px;
+  height: 125px;
+  max-width: 100%; /* Makes image responsive */
+  max-height: 100%; /* Prevents overflow */
+  object-fit: contain; /* Scales the image to fit within container without cropping */
+}
+.imgcontainer.apm-class img {
+  width: 100px;
+  height: 160px;
+  max-width: 100%; /* Makes image responsive */
+  max-height: 100%; /* Prevents overflow */
+  object-fit: contain; /* Scales the image to fit within container without cropping */
 }
