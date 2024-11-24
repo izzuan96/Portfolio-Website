@@ -10,7 +10,7 @@ function Profile() {
           <h1>Hello, I'm</h1>
           <h2> Izzuan Zawawi</h2>
           <h2>Front-End React Developer</h2>
-          <p>I do web design for a piece of bread!</p>
+          <p>I build websites for the price of a sandwich!</p>
         </div>
         <div className="profile-image">
           <img src={myPicture} alt="Izzuan Zawawi" />
