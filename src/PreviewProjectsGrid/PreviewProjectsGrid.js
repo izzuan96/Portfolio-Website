@@ -1,13 +1,15 @@
 import React from 'react';
 import Title from '../Title/Title';
 import PreviewProjectCard from '../PreviewProjectCard/PreviewProjectCard';
-import apple from '../images/appleWebsite.png'; 
+import pengembara from '../images/pengembara.png'; 
+import apple from '../images/appleWebsite.png';
 import wedding from '../images/wedding.png';// Import the image or ensure it's correctly referenced
 import './PreviewProjectsGrid.css'
 
 const projects = [
   { id: 1, image: wedding, title: 'Wedding Invitation', isLocked: false, projectLink: 'https://izzuanzawawi.com/iwenaz/' },
   { id: 2, image: apple, title: 'Epal', isLocked: true, projectLink: 'https://project2.com' },
+  { id: 3, image: pengembara, title: 'Pengembara', isLocked: false, projectLink: 'https://izzuanzawawi.com/pengembara' },
   
 
   // Add more projects as needed

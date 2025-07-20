@@ -55,6 +55,17 @@ html {
   font-style: italic;
   color: #646464;
 }
+.profile-description h3 {
+  font-size: 1.6rem;
+  color:#646464;
+}
+
+.quote-mark {
+  font-size: 4.4rem;    /* bigger quotes */
+  vertical-align: top;  /* lift them up if you like */
+  color: #666;          /* optional color tweak */
+  margin: 0 0.2rem;
+}
 
 /* Dark mode */
 .dark-mode .profile-container {
@@ -67,7 +78,10 @@ html {
   -webkit-text-fill-color: transparent;
 }
 
-.dark-mode .profile-text h2 {
+.dark-mode .profile-text h2{
+  color: #e0e0e0;
+}
+.dark-mode .profile-description h3{
   color: #e0e0e0;
 }
 

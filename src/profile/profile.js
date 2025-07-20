@@ -10,16 +10,16 @@ function Profile() {
           <h1>Hello, I'm</h1>
           <h2> Izzuan Zawawi</h2>
           <h2>Front-End React Developer</h2>
-          <p>I build websites for the price of a sandwich!</p>
+          <p>Showcasing modern, interactive web applications</p>
         </div>
         <div className="profile-image">
           <img src={myPicture} alt="Izzuan Zawawi" />
         </div>
       </section>
       <div className='profile-description'>
-        <p>
-          I am a visionary web developer who leverages AI to streamline my workflow.<br /> Unlike traditional methods, I generate code efficiently and accurately.<br /> With a deep understanding of AI, I can create complex web applications with minimal manual effort,<br /> ensuring faster development cycles and higher-quality results.
-        </p>
+        <h3>
+         "Building scalable, component‑driven interfaces with clean, maintainable code"
+        </h3>
       </div>
     </>
   );

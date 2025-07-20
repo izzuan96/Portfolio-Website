@@ -1,42 +1,79 @@
-// TechStackCarousel.js
-import React from 'react';
-import Title from '../Title/Title';
-import HtmlLogo from '../images/html.png'; // Importing images
-import CssLogo from '../images/css.png';
-import JavaScript from '../images/js.png';
-import Github from '../images/github.png';
-import Fontawesome from '../images/fontawesome.svg';
-import BootstrapLogo from '../images/bootstrap.png';
-import ReactLogo from '../images/react_logo.png';
+import React, { useState } from 'react';
 import './TechStackCards.css';
 
-// Define your tech stack data with imported logos
-const techStack = [
-    { name: 'Javascript', logo: JavaScript},
-    { name: 'HTML', logo: HtmlLogo },
-    { name: 'CSS', logo: CssLogo },
-    { name: 'Bootstrap', logo: BootstrapLogo },
-    { name: 'React.js', logo: ReactLogo }, 
-    { name: 'Github', logo: Github }, 
-    { name: 'FontAwesome', logo: Fontawesome },
-    // Add more technologies here as needed
+const techStackCategories = [
+  { category: 'All', items: [] },
+  {
+    category: 'Frontend',
+    items: [
+      { name: 'React', iconClass: 'devicon-react-original colored' },
+      { name: 'JavaScript', iconClass: 'devicon-javascript-plain colored' },
+      { name: 'HTML5', iconClass: 'devicon-html5-plain colored' },
+      { name: 'CSS3', iconClass: 'devicon-css3-plain colored' },
+      { name: 'Bootstrap', iconClass: 'devicon-bootstrap-plain colored' },
+    ]
+  },
+  {
+    category: 'Backend',
+    items: [
+      { name: 'PHP', iconClass: 'devicon-php-plain colored' },
+      { name: 'MySQL', iconClass: 'devicon-mysql-plain colored' },
+      { name: 'Python', iconClass: 'devicon-python-plain colored' },
+    ]
+  },
+  {
+    category: 'Integration',
+    items: [
+      { name: 'Axios', iconClass: 'devicon-axios-plain colored' },
+      { name: 'Leaflet.js', iconClass: 'devicon-leaflet-plain colored' },
+    ]
+  },
+  {
+    category: 'DevOps',
+    items: [
+      { name: 'GitHub', iconClass: 'devicon-github-original colored' },
+      { name: 'VS Code', iconClass: 'devicon-vscode-plain colored' },
+      // { name: 'Netlify', iconClass: 'devicon-netlify-plain colored' },
+      { name: 'GitHub Actions', iconClass: 'devicon-github-original colored' },
+    ]
+  }
 ];
 
-const TechStackCards = ({ darkMode }) => {
-    return (
-        <>
-        <Title text="Tech Stack" className="tech-stack-title" color="black" /> 
-        <div className={`tech-stack-cards ${darkMode ? 'dark-mode' : ''}`}>
-            {techStack.map((tech, index) => (
-                <div className="tech-card" key={index}>
-                    <img src={tech.logo} alt={`${tech.name} Logo`} className="tech-logo" />
-                    <h4 className="tech-name">{tech.name}</h4>
-                </div>
-            ))}
-        </div>
-        </>
-    );
-};
+// Populate All category dynamically
+techStackCategories[0].items = techStackCategories
+  .slice(1)
+  .flatMap(section =>
+    section.items.map(item => ({ ...item, category: section.category }))
+  );
 
+const TechStackCards = ({ darkMode }) => {
+  const [filter, setFilter] = useState('All');
+  const displayedItems = techStackCategories.find(s => s.category === filter).items;
+
+  return (
+    <div className={`tech-wrapper ${darkMode ? 'dark-mode' : ''}`}>
+      <h2 className="tech-title">Tech Stack</h2>
+      <div className="tech-filters">
+        {techStackCategories.map((sec, idx) => (
+          <button
+            key={idx}
+            className={filter === sec.category ? 'filter-btn active' : 'filter-btn'}
+            onClick={() => setFilter(sec.category)}
+          >
+            {sec.category}
+          </button>
+        ))}
+      </div>
+      <div className="tech-grid">
+        {displayedItems.map((tech, idx) => (
+          <div className="tech-card" key={idx}>
+            <i className={`tech-icon ${tech.iconClass}`}></i>
+            <div className="tech-label">{tech.name}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default TechStackCards;

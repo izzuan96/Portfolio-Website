@@ -1,102 +1,104 @@
-/* TechStackCarousel.css */
-.tech-stack-title{
-  padding-top: 40px;
-  color: black;
+.tech-wrapper {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+  height: 500px;
+  overflow-y: auto;
+  transition: background-color 0.3s ease;
 }
 
-.tech-stack-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); /* Adjusted for smaller screens */
-  gap: 16px; /* Space between cards */
-  padding: 60px 20px;
-  max-width: 800px; /* Adjust as needed */
-  margin: 0 auto; /* Center the grid */
-  min-height: 300px; /* Set a minimum height */
-  align-items: center; /* Center items vertically */
+.tech-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.tech-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;
+  background: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.filter-btn:hover {
+  background: #ddd;
+}
+.filter-btn.active {
+  background: #0070f3;
+  color: white;
+}
+
+.tech-grid {
+  display: flex;                        /* 💡 Use flex instead of grid */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .tech-card {
-  background-color: #fff; /* Light mode background */
-  border-radius: 8px;
-  text-align: center;
-  padding: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.tech-name {
-  margin-top: 8px;
-  font-size: 12px;
+  width: 120px;                         /* required for clean centering */
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
 }
 
 .tech-card:hover {
-  transform: scale(1.05); /* Scale effect on hover */
+  transform: scale(1.05);
 }
 
-.tech-logo {
-  width: 80px; /* Set a uniform width */
-  height: 80px; /* Set a uniform height */
-  object-fit: contain; /* Maintain aspect ratio */
-  margin-bottom: 10px; /* Space below logo */
+.tech-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
 }
 
-.tech-card h3 {
-  color: #333; /* Text color */
-  font-size: 1rem;
-  font-weight: 500;
-  margin: 0; /* Remove default margin */
+.tech-label {
+  font-size: 12px;
+  text-align: center;
 }
 
-/* Title styling */
-.custom-title {
-  margin-bottom: 20px; /* Space below the title */
-  text-align: center; /* Center the title */
-  font-size: 24px; /* Adjust font size as needed */
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212;
 }
 
-/* Dark mode styles */
-.dark-mode .tech-stack-cards {
-  background-color: #121212; /* Dark background */
+.dark-mode .tech-title,
+.dark-mode .tech-label {
+  color: #f0f0f0;
 }
 
 .dark-mode .tech-card {
-  background-color: #1e1e1e; /* Dark card background */
-  color: #e0e0e0; /* Light text color */
+  background-color: #1e1e1e;
+  color: #fff;
 }
 
-.dark-mode .tech-name {
-  color: #e0e0e0; /* Light text color for tech names */
-}
-.dark-mode .tech-card:hover {
-  box-shadow: 0 4px 8px 2px rgba(18, 138, 236, 0.852);
+.dark-mode .filter-btn {
+  background-color: #2b2b2b;
+  color: #e0e0e0;
 }
 
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .tech-stack-cards {
-    grid-template-columns: repeat(auto-fill, minmax(105px, 0.5fr)); /* More compact for small screens */
-    padding: 10px; /* Reduced padding for smaller devices */
-  }
-  .tech-logo {
-      width: 60px;
-  }
-
-  .tech-card h4 {
-      font-size: 0.9rem;
-  }
+.dark-mode .filter-btn.active {
+  background: #0070f3;
+  color: white;
 }
 
-@media (max-width: 480px) {
-  .tech-stack-cards {
-    grid-template-columns: repeat(auto-fill, minmax(80px, 0.5fr)); /* More compact for small screens */
-    padding: 10px; /* Reduced padding for smaller devices */
-  }
-  .tech-logo {
-      width: 50px;
-  }
-
-  .tech-card h4 {
-      font-size: 0.6rem;
-  }
+.dark-mode .filter-btn:hover {
+  background-color: #444;
 }
