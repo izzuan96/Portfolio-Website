@@ -1,6 +1,6 @@
 import React from 'react';
 import './profile.css';
-import myPicture from '../images/izzuan.jpeg'; // Your profile picture path
+import myPicture from '../images/izzuan.jpg'; // Your profile picture path
 
 function Profile() {
   return (

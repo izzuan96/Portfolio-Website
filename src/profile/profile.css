@@ -9,7 +9,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 54vh;
+  height: 60vh;
   background-color: #fff;
   padding: 0 20px;
   margin-top: 20px;
@@ -133,5 +133,14 @@ html {
   }
   .profile-description{
     padding: 5px;
+  }
+}
+@media (max-width: 375px) {
+  .profile-container {
+    padding: 10px;
+  }
+
+  .profile-text {
+    margin: 0 0 10px 0;
   }
 }
